@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    '../src/stories/**/*.stories.mdx',
-    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/components/**/*.stories.mdx',
+    '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -12,4 +12,5 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  typescript: { reactDocgen: false }, // fix trying to reference webpack4
 };
