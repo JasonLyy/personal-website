@@ -70,7 +70,7 @@ export const colors = {
   white: 'ffffff',
 };
 
-const fontFamily = '"Open Sans", "Droid Sans", Arial, sans-serif';
+export const fontFamily = '"Open Sans", "Droid Sans", Arial, sans-serif';
 export const fonts = {
   heading1: {
     fontFamily: fontFamily,
