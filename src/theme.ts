@@ -141,9 +141,11 @@ export interface Theme {
   name: string;
   spacing: typeof Spacing;
   colors: typeof colors;
+  fonts: typeof fonts;
 }
 export const theme: Theme = {
   name: 'default',
   spacing: Spacing,
   colors: colors,
+  fonts: fonts,
 };
