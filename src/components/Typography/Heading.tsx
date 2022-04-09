@@ -20,16 +20,18 @@ const StyledHeading = styled['h1']<StyledHeadingProps>`
 `;
 export const Heading: React.VFC<
   CustomHeadingProps & {
+    className?: string;
     props?: Omit<HeadingProps, 'ref' | 'as'>; // need to omit 'ref' & 'as' as types seem to conflict;
     children: HeadingProps['children'];
   }
-> = ({ variant, props, children }) => {
+> = ({ variant, props, children, className }) => {
   const level = variant.slice(-1);
 
   return (
     <StyledHeading
       variant={variant}
       as={`h${level}` as React.ElementType}
+      className={className}
       {...props}
     >
       {children}
