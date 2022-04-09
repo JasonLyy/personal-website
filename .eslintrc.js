@@ -1,5 +1,10 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'testing-library',
+    'eslint-plugin-jest-dom',
+  ],
   extends: [
     'next/core-web-vitals',
     'plugin:storybook/recommended',
