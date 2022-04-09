@@ -138,10 +138,12 @@ export const fonts = {
 };
 
 export interface Theme {
+  name: string;
   spacing: typeof Spacing;
   colors: typeof colors;
 }
 export const theme: Theme = {
+  name: 'default',
   spacing: Spacing,
   colors: colors,
 };
