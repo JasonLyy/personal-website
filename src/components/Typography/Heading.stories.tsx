@@ -13,30 +13,30 @@ const Template: ComponentStory<typeof Heading> = (args) => (
 
 export const Heading1 = Template.bind({});
 Heading1.args = {
-  variant: 'heading1',
+  level: 1,
 };
 
 export const Heading2 = Template.bind({});
 Heading2.args = {
-  variant: 'heading2',
+  level: 2,
 };
 
 export const Heading3 = Template.bind({});
 Heading3.args = {
-  variant: 'heading3',
+  level: 3,
 };
 
 export const Heading4 = Template.bind({});
 Heading4.args = {
-  variant: 'heading4',
+  level: 4,
 };
 
 export const Heading5 = Template.bind({});
 Heading5.args = {
-  variant: 'heading5',
+  level: 5,
 };
 
 export const Heading6 = Template.bind({});
 Heading6.args = {
-  variant: 'heading6',
+  level: 6,
 };

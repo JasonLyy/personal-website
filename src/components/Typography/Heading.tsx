@@ -1,22 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '@root/theme';
+
+const levelMapping = {
+  1: 'heading1',
+  2: 'heading2',
+  3: 'heading3',
+  4: 'heading4',
+  5: 'heading5',
+  6: 'heading6',
+} as const;
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
 type CustomHeadingProps = {
-  variant: Extract<
-    keyof typeof theme.fonts,
-    'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'heading6'
-  >;
+  level: keyof typeof levelMapping;
 };
 type StyledHeadingProps = CustomHeadingProps & HeadingProps;
 
 const StyledHeading = styled['h1']<StyledHeadingProps>`
-  font-family: ${(t) => t.theme.fonts[t.variant].fontFamily};
-  font-weight: ${(t) => t.theme.fonts[t.variant].fontWeight};
-  font-size: ${(t) => t.theme.fonts[t.variant].fontSize};
-  line-height: ${(t) => t.theme.fonts[t.variant].lineHeight};
-  letter-spacing: ${(t) => t.theme.fonts[t.variant].letterSpacing};
+  font-family: ${(t) => t.theme.fonts[levelMapping[t.level]].fontFamily};
+  font-weight: ${(t) => t.theme.fonts[levelMapping[t.level]].fontWeight};
+  font-size: ${(t) => t.theme.fonts[levelMapping[t.level]].fontSize};
+  line-height: ${(t) => t.theme.fonts[levelMapping[t.level]].lineHeight};
+  letter-spacing: ${(t) => t.theme.fonts[levelMapping[t.level]].letterSpacing};
 `;
 export const Heading: React.VFC<
   CustomHeadingProps & {
@@ -24,12 +29,10 @@ export const Heading: React.VFC<
     props?: HeadingProps;
     children: HeadingProps['children'];
   }
-> = ({ variant, props, children, className }) => {
-  const level = variant.slice(-1);
-
+> = ({ level, props, children, className }) => {
   return (
     <StyledHeading
-      variant={variant}
+      variant={level}
       as={`h${level}` as React.ElementType}
       className={className}
       {...props}
