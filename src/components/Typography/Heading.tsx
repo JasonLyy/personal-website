@@ -22,6 +22,7 @@ const StyledHeading = styled['h1']<StyledHeadingProps>`
   font-size: ${(t) => t.theme.fonts[levelMapping[t.level]].fontSize};
   line-height: ${(t) => t.theme.fonts[levelMapping[t.level]].lineHeight};
   letter-spacing: ${(t) => t.theme.fonts[levelMapping[t.level]].letterSpacing};
+  color: ${(t) => t.theme.colors.pink[1000]};
 `;
 export const Heading: React.VFC<
   CustomHeadingProps & {
