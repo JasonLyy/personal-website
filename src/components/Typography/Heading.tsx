@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '@root/theme';
 
-type HeadingProps = React.HTMLProps<HTMLHeadingElement>;
+type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
 type CustomHeadingProps = {
   variant: Extract<
     keyof typeof theme.fonts,
@@ -21,7 +21,7 @@ const StyledHeading = styled['h1']<StyledHeadingProps>`
 export const Heading: React.VFC<
   CustomHeadingProps & {
     className?: string;
-    props?: Omit<HeadingProps, 'ref' | 'as'>; // need to omit 'ref' & 'as' as types seem to conflict;
+    props?: HeadingProps;
     children: HeadingProps['children'];
   }
 > = ({ variant, props, children, className }) => {
