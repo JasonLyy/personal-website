@@ -32,7 +32,7 @@ export const Heading: React.VFC<
 > = ({ level, props, children, className }) => {
   return (
     <StyledHeading
-      variant={level}
+      level={level}
       as={`h${level}` as React.ElementType}
       className={className}
       {...props}
