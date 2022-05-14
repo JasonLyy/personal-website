@@ -1,0 +1,40 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { theme, darkTheme } from './theme';
+
+<Meta title="Theme" />
+
+# Default Theme
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Pink"
+    colors={{
+      Main: theme.colors.primary,
+      Variant: theme.colors.primaryVariant,
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Blue"
+    colors={{
+      Main: theme.colors.secondary,
+      Variant: theme.colors.secondaryVariant,
+    }}
+  />
+  <ColorItem title="Background" colors={{ White: theme.colors.background }} />
+  <ColorItem title="Surface" colors={{ White: theme.colors.background }} />
+
+  <ColorItem title="On" colors={{ 
+    Primary: theme.colors.onPrimary, 
+    Secondary: theme.colors.onSecondary, 
+    Background: theme.colors.onBackground,
+    Surface: theme.colors.onSurface,
+    Error: theme.colors.onError,
+    }} 
+  />
+</ColorPalette>
+
+# Dark
+
+To Be Implemented

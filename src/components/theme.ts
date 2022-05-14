@@ -67,7 +67,8 @@ export const colors = {
     200: '#d6d6d6',
     100: '#ebebeb',
   },
-  white: 'ffffff',
+  white: '#ffffff',
+  black: '#000000',
 };
 
 export const fontFamily = '"Open Sans", "Droid Sans", Arial, sans-serif';
@@ -139,13 +140,68 @@ export const fonts = {
 
 export interface Theme {
   name: string;
-  spacing: typeof Spacing;
-  colors: typeof colors;
-  fonts: typeof fonts;
+  tokens: {
+    spacing: typeof Spacing;
+    colors: typeof colors;
+    fonts: typeof fonts;
+  };
+  colors: {
+    primary: string;
+    primaryVariant: string;
+    secondary: string;
+    secondaryVariant: string;
+    background: string;
+    surface: string;
+    error: string;
+    onPrimary: string;
+    onSecondary: string;
+    onBackground: string;
+    onSurface: string;
+    onError: string;
+  };
 }
 export const theme: Theme = {
   name: 'default',
-  spacing: Spacing,
-  colors: colors,
-  fonts: fonts,
+  tokens: {
+    spacing: Spacing,
+    colors: colors,
+    fonts: fonts,
+  },
+  colors: {
+    primary: colors.pink[700],
+    primaryVariant: colors.pink[1000],
+    secondary: colors.blue[700],
+    secondaryVariant: colors.blue[1000],
+    background: colors.white,
+    surface: colors.white,
+    error: colors.yellow[1000],
+    onPrimary: colors.white,
+    onSecondary: colors.black,
+    onBackground: colors.white,
+    onSurface: colors.black,
+    onError: colors.black,
+  },
+};
+
+export const darkTheme: Theme = {
+  name: 'dark',
+  tokens: {
+    spacing: Spacing,
+    colors: colors,
+    fonts: fonts,
+  },
+  colors: {
+    primary: colors.pink[700],
+    primaryVariant: colors.pink[1000],
+    secondary: colors.blue[700],
+    secondaryVariant: colors.blue[1000],
+    background: colors.white,
+    surface: colors.white,
+    error: colors.yellow[1000],
+    onPrimary: colors.white,
+    onSecondary: colors.black,
+    onBackground: colors.white,
+    onSurface: colors.black,
+    onError: colors.black,
+  },
 };

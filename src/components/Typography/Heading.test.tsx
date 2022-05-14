@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { Heading } from './Heading';
-import { renderComponent } from '@root/testUtils';
+import { renderComponent } from '@root/test/testUtils';
 
 test('renders header correctly', () => {
   renderComponent(<Heading level={1}>Heading</Heading>);

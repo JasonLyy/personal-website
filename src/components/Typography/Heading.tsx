@@ -17,12 +17,13 @@ type CustomHeadingProps = {
 type StyledHeadingProps = CustomHeadingProps & HeadingProps;
 
 const StyledHeading = styled['h1']<StyledHeadingProps>`
-  font-family: ${(t) => t.theme.fonts[levelMapping[t.level]].fontFamily};
-  font-weight: ${(t) => t.theme.fonts[levelMapping[t.level]].fontWeight};
-  font-size: ${(t) => t.theme.fonts[levelMapping[t.level]].fontSize};
-  line-height: ${(t) => t.theme.fonts[levelMapping[t.level]].lineHeight};
-  letter-spacing: ${(t) => t.theme.fonts[levelMapping[t.level]].letterSpacing};
-  color: ${(t) => t.theme.colors.pink[1000]};
+  font-family: ${(t) => t.theme.tokens.fonts[levelMapping[t.level]].fontFamily};
+  font-weight: ${(t) => t.theme.tokens.fonts[levelMapping[t.level]].fontWeight};
+  font-size: ${(t) => t.theme.tokens.fonts[levelMapping[t.level]].fontSize};
+  line-height: ${(t) => t.theme.tokens.fonts[levelMapping[t.level]].lineHeight};
+  letter-spacing: ${(t) =>
+    t.theme.tokens.fonts[levelMapping[t.level]].letterSpacing};
+  color: ${(t) => t.theme.colors.primary};
 `;
 export const Heading: React.VFC<
   CustomHeadingProps & {

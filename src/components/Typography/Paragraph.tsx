@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 const variantMapping = {
   body: 'paragraphBody',
@@ -14,12 +14,15 @@ type CustomParagraphProps = {
 type StyledParagraph = CustomParagraphProps & ParagraphProps;
 
 const StyledParagraph = styled['p']<StyledParagraph>`
-  font-family: ${(t) => t.theme.fonts[variantMapping[t.variant]].fontFamily};
-  font-weight: ${(t) => t.theme.fonts[variantMapping[t.variant]].fontWeight};
-  font-size: ${(t) => t.theme.fonts[variantMapping[t.variant]].fontSize};
-  line-height: ${(t) => t.theme.fonts[variantMapping[t.variant]].lineHeight};
+  font-family: ${(t) =>
+    t.theme.tokens.fonts[variantMapping[t.variant]].fontFamily};
+  font-weight: ${(t) =>
+    t.theme.tokens.fonts[variantMapping[t.variant]].fontWeight};
+  font-size: ${(t) => t.theme.tokens.fonts[variantMapping[t.variant]].fontSize};
+  line-height: ${(t) =>
+    t.theme.tokens.fonts[variantMapping[t.variant]].lineHeight};
   letter-spacing: ${(t) =>
-    t.theme.fonts[variantMapping[t.variant]].letterSpacing};
+    t.theme.tokens.fonts[variantMapping[t.variant]].letterSpacing};
 `;
 export const Paragraph: React.VFC<
   Partial<CustomParagraphProps> & {
