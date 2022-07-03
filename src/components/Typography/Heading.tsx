@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const levelMapping = {
+  0: 'heading0',
   1: 'heading1',
   2: 'heading2',
   3: 'heading3',
@@ -24,6 +25,7 @@ const StyledHeading = styled['h1']<StyledHeadingProps>`
   letter-spacing: ${(t) =>
     t.theme.tokens.fonts[levelMapping[t.level]].letterSpacing};
   color: ${(t) => t.theme.colors.primary};
+  margin: 0;
 `;
 export const Heading: React.VFC<
   CustomHeadingProps & {
@@ -31,7 +33,7 @@ export const Heading: React.VFC<
     props?: HeadingProps;
     children: HeadingProps['children'];
   }
-> = ({ level, props, children, className }) => {
+> = ({ level = 1, props, children, className }) => {
   return (
     <StyledHeading
       level={level}
