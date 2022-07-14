@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import PageContainer from '@components/PageContainer/PageContainer';
 import { NavbarItem } from '@components/Navbar/NavbarItem';
 import { Landing } from '@root/features/landing';
+import { About } from '@root/features/about';
 
 const IndexPage = styled(PageContainer)``;
 const AboutPage = styled(PageContainer)``;
@@ -40,7 +41,9 @@ const Home: NextPage = () => {
         <Landing onPromptClick={() => aboutRef.current?.scrollIntoView()} />
       </IndexPage>
       {navBar}
-      <AboutPage ref={aboutRef}></AboutPage>
+      <AboutPage ref={aboutRef}>
+        <About />
+      </AboutPage>
       <PortfolioPage ref={portfolioRef}></PortfolioPage>
       <ContactPage />
     </>

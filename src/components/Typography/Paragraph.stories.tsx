@@ -11,6 +11,11 @@ const Template: ComponentStory<typeof Paragraph> = (args) => (
   <Paragraph {...args}>I am a paragraph</Paragraph>
 );
 
+export const ParagraphLarge = Template.bind({});
+ParagraphLarge.args = {
+  variant: 'large',
+};
+
 export const ParagraphBody = Template.bind({});
 ParagraphBody.args = {
   variant: 'body',

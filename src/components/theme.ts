@@ -122,6 +122,13 @@ export const fonts = {
     lineHeight: '1.5rem',
     letterSpacing: 'normal',
   },
+  paragraphLarge: {
+    fontFamily: fontFamily,
+    fontWeight: 400,
+    fontSize: '1.25rem',
+    lineHeight: '1.5rem',
+    letterSpacing: '-0.03em',
+  },
   paragraphBody: {
     fontFamily: fontFamily,
     fontWeight: 400,

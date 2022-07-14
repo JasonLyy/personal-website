@@ -14,14 +14,16 @@ const Container = styled.div`
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  align-self: center;
 `;
 
 const HeadingName = styled(Heading)`
   color: ${(p) => p.theme.colors.primary};
+  text-align: center;
 `;
 const HeadingTitle = styled(Heading)`
   color: ${(p) => p.theme.colors.onBackground};
+  text-align: center;
 `;
 const Body = styled(Paragraph)`
   color: ${(p) => p.theme.tokens.colors.grey[500]};
@@ -33,7 +35,7 @@ const LandingContent: React.VFC<LandingContentProps> = ({ onPromptClick }) => {
     <Container>
       <HeadingName level={0}>Jason Ly</HeadingName>
       <HeadingTitle level={1}>Software Engineer</HeadingTitle>
-      <Body variant="body">
+      <Body variant="large">
         I&apos;m a Software Engineer specialising in developing scalable and
         maintainable backend systems. Currently working at Zeller building the
         next generation of banking for small merchants.

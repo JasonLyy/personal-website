@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div<{ isScrolled: boolean }>`
   height: 56px;
   position: fixed;
+  background-color: ${(p) => p.theme.colors.background};
   top: 0;
   width: 100%;
   box-shadow: ${(p) =>

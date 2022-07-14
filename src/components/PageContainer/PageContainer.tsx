@@ -2,8 +2,9 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  display: flex;
   background: ${(p) => p.theme.colors.background};
-  height: 100vh;
+  min-height: 100vh;
   border: 1px solid red;
 `;
 
