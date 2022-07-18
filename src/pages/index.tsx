@@ -6,11 +6,20 @@ import PageContainer from '@components/PageContainer/PageContainer';
 import { NavbarItem } from '@components/Navbar/NavbarItem';
 import { Landing } from '@root/features/landing';
 import { About } from '@root/features/about';
+import { Portfolio } from '@root/features/portfolio';
 
-const IndexPage = styled(PageContainer)``;
-const AboutPage = styled(PageContainer)``;
-const PortfolioPage = styled(PageContainer)``;
-const ContactPage = styled(PageContainer)``;
+const IndexPage = styled(PageContainer)`
+  scroll-margin-top: 56px;
+`;
+const AboutPage = styled(PageContainer)`
+  scroll-margin-top: 56px;
+`;
+const PortfolioPage = styled(PageContainer)`
+  scroll-margin-top: 56px;
+`;
+const ContactPage = styled(PageContainer)`
+  scroll-margin-top: 56px;
+`;
 
 const Home: NextPage = () => {
   const indexRef = useRef<HTMLDivElement>(null);
@@ -20,16 +29,40 @@ const Home: NextPage = () => {
 
   const navBar = (
     <Navbar>
-      <NavbarItem onClick={() => indexRef.current?.scrollIntoView()}>
+      <NavbarItem
+        onClick={() =>
+          indexRef.current?.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }
+      >
         Home
       </NavbarItem>
-      <NavbarItem onClick={() => aboutRef.current?.scrollIntoView()}>
+      <NavbarItem
+        onClick={() =>
+          aboutRef.current?.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }
+      >
         About Me
       </NavbarItem>
-      <NavbarItem onClick={() => portfolioRef.current?.scrollIntoView()}>
+      <NavbarItem
+        onClick={() =>
+          portfolioRef.current?.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }
+      >
         Portfolio
       </NavbarItem>
-      <NavbarItem onClick={() => contactRef.current?.scrollIntoView()}>
+      <NavbarItem
+        onClick={() =>
+          contactRef.current?.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }
+      >
         Contact
       </NavbarItem>
     </Navbar>
@@ -38,13 +71,21 @@ const Home: NextPage = () => {
   return (
     <>
       <IndexPage ref={indexRef}>
-        <Landing onPromptClick={() => aboutRef.current?.scrollIntoView()} />
+        <Landing
+          onPromptClick={() =>
+            aboutRef.current?.scrollIntoView({
+              behavior: 'smooth',
+            })
+          }
+        />
       </IndexPage>
       {navBar}
       <AboutPage ref={aboutRef}>
         <About />
       </AboutPage>
-      <PortfolioPage ref={portfolioRef}></PortfolioPage>
+      <PortfolioPage ref={portfolioRef}>
+        <Portfolio />
+      </PortfolioPage>
       <ContactPage />
     </>
   );
