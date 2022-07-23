@@ -7,6 +7,7 @@ import { NavbarItem } from '@components/Navbar/NavbarItem';
 import { Landing } from '@root/features/landing';
 import { About } from '@root/features/about';
 import { Portfolio } from '@root/features/portfolio';
+import { SocialLinks } from '@components/SocialLinks';
 
 const IndexPage = styled(PageContainer)`
   scroll-margin-top: 56px;
@@ -17,15 +18,11 @@ const AboutPage = styled(PageContainer)`
 const PortfolioPage = styled(PageContainer)`
   scroll-margin-top: 56px;
 `;
-const ContactPage = styled(PageContainer)`
-  scroll-margin-top: 56px;
-`;
 
 const Home: NextPage = () => {
   const indexRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
 
   const navBar = (
     <Navbar>
@@ -56,13 +53,7 @@ const Home: NextPage = () => {
       >
         Portfolio
       </NavbarItem>
-      <NavbarItem
-        onClick={() =>
-          contactRef.current?.scrollIntoView({
-            behavior: 'smooth',
-          })
-        }
-      >
+      <NavbarItem onClick={() => window.open('mailto:ly.jason.1999@gmail.com')}>
         Contact
       </NavbarItem>
     </Navbar>
@@ -80,13 +71,13 @@ const Home: NextPage = () => {
         />
       </IndexPage>
       {navBar}
+      <SocialLinks />
       <AboutPage ref={aboutRef}>
         <About />
       </AboutPage>
       <PortfolioPage ref={portfolioRef}>
         <Portfolio />
       </PortfolioPage>
-      <ContactPage />
     </>
   );
 };

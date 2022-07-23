@@ -191,7 +191,7 @@ export const theme: Theme = {
     error: colors.yellow[700],
     onPrimary: colors.grey[1000],
     onSecondary: colors.grey[1000],
-    onBackground: colors.grey[300],
+    onBackground: colors.grey[500],
     onSurface: colors.grey[300],
     onError: colors.black,
   },

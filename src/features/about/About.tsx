@@ -58,16 +58,16 @@ const ListContainer = styled.div`
 `;
 
 const List = styled.ul`
-  font-size: ${(p) => p.theme.tokens.fonts.paragraphBody.fontSize};
-  font-family: ${(p) => p.theme.tokens.fonts.paragraphBody.fontFamily};
-  font-weight: ${(p) => p.theme.tokens.fonts.paragraphBody.fontWeight};
-  line-height: ${(p) => p.theme.tokens.fonts.paragraphBody.lineHeight};
-  letter-spacing: ${(p) => p.theme.tokens.fonts.paragraphBody.letterSpacing};
   margin: 0;
 `;
 
 const ListItem = styled.li`
   word-wrap: break-word;
+  font-size: ${(p) => p.theme.tokens.fonts.paragraphLarge.fontSize};
+  font-family: ${(p) => p.theme.tokens.fonts.paragraphLarge.fontFamily};
+  font-weight: ${(p) => p.theme.tokens.fonts.paragraphLarge.fontWeight};
+  line-height: ${(p) => p.theme.tokens.fonts.paragraphLarge.lineHeight};
+  letter-spacing: ${(p) => p.theme.tokens.fonts.paragraphLarge.letterSpacing};
 `;
 
 export const About: React.VFC = () => {
@@ -81,11 +81,13 @@ export const About: React.VFC = () => {
         </ProfileImageContainer>
         <AboutText>
           <Paragraph variant="large">
-            Hi there! I&apos;m Jason (not JSON) and I enjoy building high impact
-            applications. My software engineering career began just before
-            COVID-19 where I had the opportunity to work at SEEK and also at a
-            SaaS scale-up which allowed me to build a wealth of experience in
-            all stages of software development.
+            Hi there! I&apos;m{' '}
+            <span style={{ textDecoration: 'line-through' }}>JSON</span> Jason
+            and I enjoy building high impact applications. My software
+            engineering career began just before COVID-19 where I had the
+            opportunity to work at SEEK and also at a SaaS scale-up which
+            allowed me to build a wealth of experience in all stages of software
+            development.
           </Paragraph>
 
           <Paragraph variant="large">
@@ -137,8 +139,8 @@ export const About: React.VFC = () => {
             of work include:
           </Paragraph>
           <List>
-            <li>Flutter - riverpod</li>
-            <li>Golang - gorm, echo, gqlgen</li>
+            <ListItem>Flutter - riverpod</ListItem>
+            <ListItem>Golang - gorm, echo, gqlgen</ListItem>
           </List>
         </AboutText>
       </AboutContent>

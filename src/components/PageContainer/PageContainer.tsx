@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   background: ${(p) => p.theme.colors.background};
   min-height: 100vh;
-  border: 1px solid red;
+  padding: 16px;
 `;
 
 type PageContainerProps = React.ComponentPropsWithRef<'div'>;
