@@ -2,7 +2,6 @@ import { Heading, Paragraph } from '@components/Typography';
 import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
-import Image from 'next/future/image';
 import VerbPic from '@root/public/verb.png';
 import AirbnbClonePic from '@root/public/airbnb_clone.png';
 import GitHubPic from '@root/public/github.svg';
@@ -87,7 +86,7 @@ export const Portfolio: React.VFC = () => {
       <Heading level={1}>Portfolio</Heading>
       <PortfolioItems>
         <PortfolioItem
-          imageUrl={VerbPic.src}
+          imageUrl={VerbPic}
           href="https://verbconnect.webflow.io/"
         >
           <PortfolioItemContent>
@@ -111,7 +110,7 @@ export const Portfolio: React.VFC = () => {
           </PortfolioItemContent>
         </PortfolioItem>
         <PortfolioItem
-          imageUrl={AirbnbClonePic.src}
+          imageUrl={AirbnbClonePic}
           href="https://github.com/JasonLyy/airbnb-clone"
         >
           <PortfolioItemContent>

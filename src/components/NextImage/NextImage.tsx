@@ -1,10 +1,8 @@
-import Image, { ImageLoader, ImageProps } from 'next/future/image';
+import Image, { ImageLoaderProps, ImageProps } from 'next/future/image';
 import React from 'react';
 
-const s3ImageLoader: ImageLoader = ({ src, width, quality }) => {
-  return `http://www.jsonjason.com.s3-website-ap-southeast-2.amazonaws.com${src}?w=${width}&q=${
-    quality || 75
-  }`;
+export const s3ImageLoader = ({ src }: Partial<ImageLoaderProps>) => {
+  return `${src}`;
 };
 
 const NextImage: typeof Image = (props: ImageProps) => {

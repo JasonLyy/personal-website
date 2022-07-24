@@ -1,6 +1,5 @@
 import { Heading, Paragraph } from '@components/Typography';
 import React from 'react';
-import Image from 'next/future/image';
 import styled from 'styled-components';
 import ProfilePic from '@root/public/profile_pic.jpg';
 import NextImage from '@components/NextImage/NextImage';

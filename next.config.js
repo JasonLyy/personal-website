@@ -22,5 +22,6 @@ const nextConfig = {
 };
 
 module.exports = withOptimizedImages({
+  handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
   ...nextConfig,
 });
