@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withOptimizedImages = require('next-optimized-images');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +13,14 @@ const nextConfig = {
     },
   },
   swcMinify: true,
+  images: {
+    disableStaticImages: true,
+    unoptimized: true,
+    loader: 'custom',
+    path: '',
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withOptimizedImages({
+  ...nextConfig,
+});

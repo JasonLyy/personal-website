@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/future/image';
 import styled from 'styled-components';
 import ProfilePic from '@root/public/profile_pic.jpg';
+import NextImage from '@components/NextImage/NextImage';
 
 const Container = styled.div`
   display: flex;
@@ -43,7 +44,7 @@ const ProfileImageContainer = styled.div`
   }
 `;
 
-const PofileImage = styled(Image)`
+const PofileImage = styled(NextImage)`
   max-width: 300px;
   width: 100%;
   height: 100%;

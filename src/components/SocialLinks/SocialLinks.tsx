@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Image from 'next/future/image';
 import LinkedinPic from '@root/public/linkedin.svg';
 import GitHubPic from '@root/public/github.svg';
+import NextImage from '@components/NextImage/NextImage';
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const Container = styled.div`
   right: 0;
 `;
 
-const Icon = styled(Image)`
+const Icon = styled(NextImage)`
   width: 48px;
   height: 48px;
   object-position: center;

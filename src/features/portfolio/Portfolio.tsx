@@ -6,6 +6,7 @@ import Image from 'next/future/image';
 import VerbPic from '@root/public/verb.png';
 import AirbnbClonePic from '@root/public/airbnb_clone.png';
 import GitHubPic from '@root/public/github.svg';
+import NextImage from '@components/NextImage/NextImage';
 
 const Container = styled.div`
   display: flex;
@@ -64,7 +65,7 @@ const List = styled.ul`
   margin: 0;
 `;
 
-const GithubImage = styled(Image)`
+const GithubImage = styled(NextImage)`
   width: 80%;
   height: 80%;
   object-fit: contain;
