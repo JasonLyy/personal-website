@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   background: ${(p) => p.theme.colors.background};
   min-height: 100vh;
+  min-width: 400px;
   padding: 16px;
 `;
 

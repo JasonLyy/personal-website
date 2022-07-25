@@ -15,23 +15,13 @@ const Container = styled.div`
   align-self: center;
 `;
 
-const AboutContent = styled.div`
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
 const AboutText = styled.div`
-  width: 65%;
+  width: 100%;
   color: ${(p) => p.theme.colors.onBackground};
 `;
 
 const ProfileImageContainer = styled.div`
+  float: right;
   padding: ${(p) => p.theme.tokens.spacing.md};
 
   align-self: flex-start;
@@ -44,6 +34,7 @@ const ProfileImageContainer = styled.div`
 `;
 
 const PofileImage = styled(NextImage)`
+  display: inline-block;
   max-width: 300px;
   width: 100%;
   height: 100%;
@@ -54,7 +45,6 @@ const PofileImage = styled(NextImage)`
 
 const ListContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
 `;
 
 const List = styled.ul`
@@ -75,75 +65,72 @@ export const About: React.VFC = () => {
     <Container>
       <Heading level={1}>About Me</Heading>
 
-      <AboutContent>
+      <AboutText>
         <ProfileImageContainer>
           <PofileImage src={ProfilePic} />
         </ProfileImageContainer>
-        <AboutText>
-          <Paragraph variant="large">
-            Hi there! I&apos;m{' '}
-            <span style={{ textDecoration: 'line-through' }}>JSON</span> Jason
-            and I enjoy building high impact applications. My software
-            engineering career began just before COVID-19 where I had the
-            opportunity to work at SEEK and also at a SaaS scale-up which
-            allowed me to build a wealth of experience in all stages of software
-            development.
-          </Paragraph>
+        <Paragraph variant="large">
+          Hi there! I&apos;m{' '}
+          <span style={{ textDecoration: 'line-through' }}>JSON</span> Jason and
+          I enjoy building high impact applications. My software engineering
+          career began just before COVID-19 where I had the opportunity to work
+          at SEEK and also at a SaaS scale-up which allowed me to build a wealth
+          of experience in all stages of software development.
+        </Paragraph>
 
-          <Paragraph variant="large">
-            Today, I&apos;m currently a Software Engineer at Zeller; the next
-            generation of banking for small Merchants. I primarily work on the
-            backend building out secure and highly scalable features.
-          </Paragraph>
+        <Paragraph variant="large">
+          Today, I&apos;m currently a Software Engineer at Zeller; the next
+          generation of banking for small Merchants. I primarily work on the
+          backend building out secure and highly scalable features.
+        </Paragraph>
 
-          <Paragraph variant="large">
-            These are some of the technologies I have worked with recently:
-          </Paragraph>
+        <Paragraph variant="large">
+          These are some of the technologies I have worked with recently:
+        </Paragraph>
 
-          <ListContainer>
-            <div>
-              <Paragraph variant="large">Frontend</Paragraph>
-              <List>
-                <ListItem>React Typescript</ListItem>
-                <ListItem>Webpack</ListItem>
-                <ListItem>SCSS</ListItem>
-                <ListItem>Apollo GraphQL</ListItem>
-                <ListItem>Jest/Enzyme</ListItem>
-                <ListItem>Storybook</ListItem>
-              </List>
-            </div>
-            <div>
-              <Paragraph variant="large">Backend</Paragraph>
-              <List>
-                <ListItem>Typescript - node.js/next.js</ListItem>
-                <ListItem>PHP - Symfony</ListItem>
-                <ListItem>graphQL</ListItem>
-                <ListItem>SQL - Postgres</ListItem>
-                <ListItem>NoSQL - DynamoDB (Single table design)</ListItem>
-                <ListItem>AWS</ListItem>
-                <ListItem>CQRS/Event driven design</ListItem>
-              </List>
-            </div>
-          </ListContainer>
-          <Paragraph variant="large">
-            I&apos;m passionate about building things that last (think Clean
-            Architecture) and the best way to do that is to experiment and
-            build. In my spare time I also enjoy building things and testing out
-            different technologies. Right now, I&apos;m also working with a
-            bunch of friends to build out a social platform which aims to
-            connect young and like minded peers together.
-          </Paragraph>
+        <ListContainer>
+          <div>
+            <Paragraph variant="large">Frontend</Paragraph>
+            <List>
+              <ListItem>React Typescript</ListItem>
+              <ListItem>Webpack</ListItem>
+              <ListItem>SCSS</ListItem>
+              <ListItem>Apollo GraphQL</ListItem>
+              <ListItem>Jest/Enzyme</ListItem>
+              <ListItem>Storybook</ListItem>
+            </List>
+          </div>
+          <div>
+            <Paragraph variant="large">Backend</Paragraph>
+            <List>
+              <ListItem>Typescript - node.js/next.js</ListItem>
+              <ListItem>PHP - Symfony</ListItem>
+              <ListItem>graphQL</ListItem>
+              <ListItem>SQL - Postgres</ListItem>
+              <ListItem>NoSQL - DynamoDB (Single table design)</ListItem>
+              <ListItem>AWS</ListItem>
+              <ListItem>CQRS/Event driven design</ListItem>
+            </List>
+          </div>
+        </ListContainer>
+        <Paragraph variant="large">
+          I&apos;m passionate about building things that last (think Clean
+          Architecture) and the best way to do that is to experiment and build.
+          In my spare time I also enjoy building things and testing out
+          different technologies. Right now, I&apos;m also working with a bunch
+          of friends to build out a social platform which aims to connect young
+          and like minded peers together.
+        </Paragraph>
 
-          <Paragraph variant="large">
-            Technologies I have a particular interest in and worked with outside
-            of work include:
-          </Paragraph>
-          <List>
-            <ListItem>Flutter - riverpod</ListItem>
-            <ListItem>Golang - gorm, echo, gqlgen</ListItem>
-          </List>
-        </AboutText>
-      </AboutContent>
+        <Paragraph variant="large">
+          Technologies I have a particular interest in and worked with outside
+          of work include:
+        </Paragraph>
+        <List>
+          <ListItem>Flutter - riverpod</ListItem>
+          <ListItem>Golang - gorm, echo, gqlgen</ListItem>
+        </List>
+      </AboutText>
     </Container>
   );
 };

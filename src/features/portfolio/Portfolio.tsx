@@ -9,7 +9,7 @@ import NextImage from '@components/NextImage/NextImage';
 
 const Container = styled.div`
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
   flex-direction: column;
@@ -23,6 +23,7 @@ const PortfolioItems = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  align-items: center;
   align-self: center;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -30,8 +31,8 @@ const PortfolioItems = styled.div`
 `;
 
 const PortfolioItem = styled.a<{ imageUrl?: string }>`
-  width: 400px;
-  height: 400px;
+  width: 375px;
+  height: 375px;
   background: ${(p) => (p.imageUrl ? `url(${p.imageUrl})` : `white`)};
   background-size: cover;
   background-repeat: no-repeat;

@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <AppProvider>
       <GlobalStyle />
       <Head>
+        <title>Jason Ly</title>
         <link rel="shortcut icon" href={Icon} />
       </Head>
       <Component {...pageProps} />
