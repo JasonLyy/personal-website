@@ -16,18 +16,21 @@ const Icon = styled(NextImage)`
   width: 48px;
   height: 48px;
   object-position: center;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(164deg)
-    brightness(104%) contrast(101%); // #FFFFFF;
+  filter: invert(78%) sepia(0%) saturate(1222%) hue-rotate(146deg)
+    brightness(79%) contrast(91%); /* #999999 */
 `;
 
 export const SocialLinks: React.VFC = () => {
   return (
     <Container>
-      <a href="https://www.linkedin.com/in/jason-lyy/">
-        <Icon src={LinkedinPic} />
+      <a
+        href="https://www.linkedin.com/in/jason-lyy/"
+        aria-label="Linkedin link"
+      >
+        <Icon src={LinkedinPic} alt="Linkedin icon" />
       </a>
-      <a href="https://github.com/JasonLyy">
-        <Icon src={GitHubPic} />
+      <a href="https://github.com/JasonLyy" aria-label="Github link">
+        <Icon src={GitHubPic} alt="Github icon" />
       </a>
     </Container>
   );

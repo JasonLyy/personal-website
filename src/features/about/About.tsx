@@ -67,7 +67,7 @@ export const About: React.VFC = () => {
 
       <AboutText>
         <ProfileImageContainer>
-          <PofileImage src={ProfilePic} />
+          <PofileImage src={ProfilePic} alt="Portrait of Jason Ly" />
         </ProfileImageContainer>
         <Paragraph variant="large">
           Hi there! I&apos;m{' '}

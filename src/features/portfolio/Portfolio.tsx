@@ -89,6 +89,7 @@ export const Portfolio: React.VFC = () => {
         <PortfolioItem
           imageUrl={VerbPic}
           href="https://verbconnect.webflow.io/"
+          aria-label="Verb Connect project link"
         >
           <PortfolioItemContent>
             <Heading level={2}>Verb Connect</Heading>
@@ -113,6 +114,7 @@ export const Portfolio: React.VFC = () => {
         <PortfolioItem
           imageUrl={AirbnbClonePic}
           href="https://github.com/JasonLyy/airbnb-clone"
+          aria-label="Airbnb clone project link"
         >
           <PortfolioItemContent>
             <Heading level={2}>Airbnb Clone</Heading>
@@ -140,8 +142,11 @@ export const Portfolio: React.VFC = () => {
             </List>
           </PortfolioItemContent>
         </PortfolioItem>
-        <PortfolioItem href="https://github.com/JasonLyy/">
-          <GithubImage src={GitHubPic} />
+        <PortfolioItem
+          href="https://github.com/JasonLyy/"
+          aria-label="More projects on github link"
+        >
+          <GithubImage src={GitHubPic} alt="Github logo" />
         </PortfolioItem>
       </PortfolioItems>
     </Container>

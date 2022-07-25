@@ -29,7 +29,8 @@ const StyledButton = styled.button<Partial<ButtonProps>>`
     `}
 
   &:hover {
-    background-color: ${(p) => p.color ?? rgba(p.theme.colors.primary, 0.2)};
+    background-color: ${(p) =>
+      p.color ? rgba(p.color, 0.2) : rgba(p.theme.colors.primary, 0.2)};
   }
 `;
 

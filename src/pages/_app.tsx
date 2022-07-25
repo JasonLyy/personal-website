@@ -11,6 +11,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Jason Ly</title>
         <link rel="shortcut icon" href={Icon} />
+        <meta
+          name="description"
+          content="Jason Ly - Melbourne based Software Engineer specialising in backend development."
+        />
+        <meta httpEquiv="Content-Security-Policy" content="" />
       </Head>
       <Component {...pageProps} />
     </AppProvider>

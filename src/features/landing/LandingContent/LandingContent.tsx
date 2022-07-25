@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import Button from '@components/Button/Button';
 import { Heading, Paragraph } from '@components/Typography';
 
@@ -31,6 +31,8 @@ const Body = styled(Paragraph)`
 `;
 
 const LandingContent: React.VFC<LandingContentProps> = ({ onPromptClick }) => {
+  const theme = useTheme();
+
   return (
     <Container>
       <HeadingName level={0}>Jason Ly</HeadingName>
@@ -40,7 +42,12 @@ const LandingContent: React.VFC<LandingContentProps> = ({ onPromptClick }) => {
         maintainable backend systems. Currently working at Zeller building the
         next generation of banking for small merchants.
       </Body>
-      <Button size="large" variant="outlined" onClick={onPromptClick}>
+      <Button
+        size="large"
+        variant="outlined"
+        onClick={onPromptClick}
+        color={theme.colors.secondary}
+      >
         Want to learn more?
       </Button>
     </Container>

@@ -186,7 +186,7 @@ export const theme: Theme = {
     primaryVariant: colors.green[700],
     secondary: colors.pink[500],
     secondaryVariant: colors.pink[700],
-    background: colors.blue[500],
+    background: colors.blue[800],
     surface: colors.blue[300],
     error: colors.yellow[700],
     onPrimary: colors.grey[1000],
