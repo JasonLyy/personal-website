@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy --all",
+    "deploy:store": "cdk deploy PersonalWebsiteStoreStack"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
